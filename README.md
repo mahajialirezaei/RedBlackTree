@@ -1,77 +1,92 @@
-Red-Black Tree (Java Implementation)
-Overview
-This project provides an efficient Java implementation of a Red-Black Tree, a self-balancing binary search tree that maintains logarithmic time complexity for insertion, deletion, and search operations. The tree automatically balances itself using color properties, rotations, and recoloring to ensure optimal performance.
+# Red-Black Tree Implementation
 
-Features
-✅ Insertion: Adds elements while maintaining Red-Black Tree properties.
-✅ Deletion: Removes elements and rebalances the tree.
-✅ Search: Efficient lookup in O(log n) time complexity.
-✅ Tree Traversals: Supports in-order, pre-order, and post-order traversal methods.
-✅ Balancing Mechanism: Uses left/right rotations and recoloring to maintain balance.
-✅ Visualization Support: Prints the tree structure for better understanding.
-How Red-Black Tree Works
-A Red-Black Tree follows these key properties:
+## Overview
 
-Every node is either red or black.
-The root node is always black.
-Red nodes cannot have red children (no two consecutive red nodes).
-Every path from a node to its descendant NULL nodes must have the same number of black nodes.
-Newly inserted nodes are always red and may require rotations or recoloring to maintain balance.
-Balancing is achieved through rotations (left/right) and recoloring based on the following cases:
+This project provides an implementation of a **Red-Black Tree**, a self-balancing binary search tree. Red-Black Trees ensure that the tree remains balanced, resulting in efficient operations for insertion, deletion, and search, with a time complexity of **O(log n)**.
 
-Case 1: Red uncle → Recoloring
-Case 2: Black uncle (zig-zag) → Rotation + recoloring
-Case 3: Black uncle (straight line) → Rotation
-Installation & Usage
-Prerequisites
-Java Development Kit (JDK 8 or later)
-Any Java IDE (e.g., IntelliJ IDEA, Eclipse, VS Code)
-Basic understanding of tree data structures
-Cloning the Repository
-Clone the repository using:
+## Features
 
-sh
-Copy
-Edit
-git clone https://github.com/mahajialirezaei/RedBlackTree.git
-cd RedBlackTree
-Compilation & Execution
-Using Command Line:
-sh
-Copy
-Edit
-javac RedBlackTree.java
-java RedBlackTree
-Running in an IDE:
-Open the project in your preferred Java IDE.
-Compile and run the Main.java file (or the file containing the main method).
-The program will execute Red-Black Tree operations.
-Example Usage (Java Code)
-java
-Copy
-Edit
-public class Main {
-    public static void main(String[] args) {
-        RedBlackTree tree = new RedBlackTree();
-        
-        tree.insert(10);
-        tree.insert(20);
-        tree.insert(30);
-        tree.delete(20);
-        
-        tree.inOrderTraversal(); // Displays the tree in sorted order
-    }
-}
-Performance Analysis
-Operation	Average Case	Worst Case
-Search	O(log n)	O(log n)
-Insertion	O(log n)	O(log n)
-Deletion	O(log n)	O(log n)
-Since the tree remains balanced, all operations run in logarithmic time complexity.
+- Insertion of elements while maintaining the Red-Black Tree properties
+- Deletion of elements with rebalancing
+- Searching for a specific element
+- Traversal operations (in-order, pre-order, post-order)
+- Visualization of the tree structure
 
-Contributions
-Contributions are welcome! If you’d like to improve this project:
+## Technologies Used
 
-Fork the repository.
-Create a new branch (feature-branch).
-Submit a pull request with improvements.
+- **Language:** C++
+- **Development Tools:** GCC, Clang, or any C++ compiler
+- **Data Structures:** Binary Search Trees, Red-Black Tree balancing techniques
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have a C++ compiler installed. You can use:
+
+- GCC: `sudo apt install g++` (Linux)
+- Clang: `brew install llvm` (macOS)
+- MSVC: Installed with Visual Studio (Windows)
+
+### Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/mahajialirezaei/RedBlackTree.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd RedBlackTree
+   ```
+3. Compile the project:
+   ```sh
+   g++ -o red_black_tree main.cpp RedBlackTree.cpp
+   ```
+4. Run the executable:
+   ```sh
+   ./red_black_tree
+   ```
+
+## Usage
+
+Once the program is running, you can:
+
+- Insert elements by providing input when prompted.
+- Delete elements from the tree.
+- Search for a specific element.
+- View the tree structure using traversal methods.
+
+## Red-Black Tree Properties
+
+The tree follows these essential properties:
+
+1. Every node is either **red** or **black**.
+2. The **root** node is always **black**.
+3. **Red** nodes cannot have **red** children (no two consecutive red nodes).
+4. Every path from a node to its descendant **NULL** nodes must have the same number of **black** nodes.
+
+## Example
+
+```cpp
+RedBlackTree tree;
+tree.insert(10);
+tree.insert(20);
+tree.insert(30);
+tree.insert(15);
+tree.display();
+```
+
+This will insert elements into the tree while maintaining the Red-Black properties and display the tree structure.
+
+## Contributing
+
+Contributions are welcome! Feel free to submit issues or pull requests to improve this implementation.
+
+## License
+
+This project is open-source and available under the MIT License.
+
+## Author
+
+[Mahaji Alirezaei](https://github.com/mahajialirezaei)
+
