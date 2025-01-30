@@ -1,5 +1,3 @@
-Here’s the updated `README.md` for your **Java-based Red-Black Tree with JavaFX visualization**:  
-
 ---
 
 # Red-Black Tree Implementation  
